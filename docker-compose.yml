@@ -1,0 +1,27 @@
+---
+version: "3.8"
+services:
+  movies:
+    image: manikantacherry/moviesnetflix:latest
+    ports:
+      - 91:80
+    deploy:
+      replicas: 3
+  train:
+    image: manikantacherry/trainnetflix:latest
+    ports:
+      - 92:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: manikantacherry/rechargenetflix:latest
+    ports:
+      - 93:80
+    deploy:
+      replicas: 3
+  dth:
+    image: manikantacherry/dthnetflix:latest
+    ports:
+      - 94:80
+    deploy:
+      replicas: 3
